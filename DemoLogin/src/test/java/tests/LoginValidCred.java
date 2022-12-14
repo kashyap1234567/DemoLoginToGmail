@@ -36,6 +36,7 @@ public class LoginValidCred extends Browser {
 		String userName = Utility.getDataFromExcel("Sheet1",1,0);
 		String Passward = Utility.getDataFromExcel("Sheet1",1,1);
 		loginpg.loginToGmail(userName, Passward);
+		Thread.sleep(3000);
 		try {
 			driver.findElement(By.xpath("//div[text()='Sign out']")).click();
 		}
